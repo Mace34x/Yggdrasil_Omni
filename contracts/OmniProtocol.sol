@@ -3,7 +3,7 @@ pragma solidity ^0.8.19;
 
 import "./EthicalGuard.sol";
 
-contract YourProtocol is EthicalGuard {
+contract OmniProtocol is EthicalGuard {
     uint256 public userCount;
     mapping(address => bool) public activeUsers;
 
@@ -14,7 +14,7 @@ contract YourProtocol is EthicalGuard {
 
     function _releaseFork() internal override {
         // 1. Create new instance
-        YourProtocol newFork = new YourProtocol();
+        OmniProtocol newFork = new OmniProtocol();
 
         // 2. Migrate state (simplified example)
         newFork.setUserCount(userCount);
