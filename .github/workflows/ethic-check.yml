@@ -1,0 +1,25 @@
+name: Ethical License Enforcement
+
+on: [push, pull_request]
+
+jobs:
+  license-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Verify License Headers
+        run: |
+          for file in $(find contracts -name '*.sol'); do
+            if ! grep -q "SPDX-License-Identifier: GPL-3.0-or-later+Ethical" "$file"; then
+              echo "::error file=$file::Missing ethical license header"
+              exit 1
+            fi
+          done
+
+      - name: Check Ethical Charter
+        run: |
+          if [ ! -f "ETHICAL_CHARTER.md" ]; then
+            echo "::error::ETHICAL_CHARTER.md missing"
+            exit 1
+          fi
