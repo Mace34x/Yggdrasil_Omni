@@ -672,3 +672,18 @@ may consider it more useful to permit linking proprietary applications with
 the library.  If this is what you want to do, use the GNU Lesser General
 Public License instead of this License.  But first, please read
 <https://www.gnu.org/licenses/why-not-lgpl.html>.
+
+GNU GENERAL PUBLIC LICENSE
+Version 3, 29 June 2007
+
+[Full GPLv3 text from https://www.gnu.org/licenses/gpl-3.0.txt]
+
+=== ETHICAL EXTENSION TERMS ===
+1. Derivative Works Must Preserve:
+   a) Cross-chain interoperability without proprietary restrictions
+   b) User-controlled data ownership (Soulbound assets)
+   c) Fork rights for 20% of active users
+
+2. Violation automatically terminates all rights granted by this license
+
+3. These terms are binding for all descendants and cannot be removed
